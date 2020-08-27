@@ -34,6 +34,7 @@ class Transfer
     if self.status != "reversed"
       @sender.deposit(self.amount)
       @receiver.balance -= self.amount
+      self.status = "reversed"
     end
   end
 
