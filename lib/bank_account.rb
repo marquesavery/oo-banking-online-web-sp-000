@@ -15,6 +15,7 @@ class BankAccount
   end
 
   def display_balance
+    pry
     puts "Your balance is $#{@balance}."
   end
 
