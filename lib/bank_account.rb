@@ -9,4 +9,11 @@ class BankAccount
     @status = "open"
   end
 
+  def deposit
+  end
+
+  def display_balance
+    @balance
+  end
+
 end
