@@ -19,7 +19,6 @@ class Transfer
   end
 
   def execute_transaction
-    # binding.pry
     if @sender.balance < self.amount || @receiver.status == "closed"
       self.status = "rejected"
       "Transaction rejected. Please check your account balance."
@@ -32,6 +31,7 @@ class Transfer
 
   def reverse_transfer
     if self.status != "reversed"
+      binding.pry
       @sender.deposit(self.amount)
       @receiver.balance -= self.amount
       self.status = "reversed"
