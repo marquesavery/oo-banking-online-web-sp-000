@@ -19,6 +19,7 @@ class BankAccount
   end
 
   def valid?
+    if self.balance > 0 && self.status != "closed"
   end
 
   def close_account
