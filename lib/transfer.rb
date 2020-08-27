@@ -23,7 +23,7 @@ class Transfer
     else
       receiver.deposit(self.amount)
       sender.balance -= self.amount
-
+    end
   end
 
 end
