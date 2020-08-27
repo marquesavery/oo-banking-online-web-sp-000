@@ -22,6 +22,7 @@ class Transfer
     # binding.pry
     if @sender.balance < self.amount || @receiver.status == "closed"
       "Transaction rejected. Please check your account balance."
+      self.status = "rejected"
     elsif self.status == "pending"
       @receiver.deposit(self.amount)
       @sender.balance -= self.amount
